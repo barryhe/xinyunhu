@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+        <title>Xinyun Huang</title>
+        <link rel="stylesheet" href="lib/nav.css">
+        <style>
+            * {
+                outline: none;
+            }
+            body {
+                padsding: 0; 
+                margin: 0;
+            }
+            .mainframe {
+                position: relative;
+                height:130vh;
+                background-color: #F7E7FE;
+                background-repeat: repeat;
+            }
+            .content {
+                margin-top: 40px;
+                position: relative;
+                width: 100vw; 
+                text-align: center;
+            }
+            .content_inner {
+                display: inline-block;
+                width: 90vw; 
+                height: 100px;
+            }
+            #lady {
+                margin-left: -5%;
+                width: 100%;   
+                z-index: 1;
+                margin-top: 15%;
+            }
+            #heart {
+                position: absolute;
+                width: 25%;
+                margin-top: 73%;
+                margin-left: 39%;
+                z-index: 10;
+            }
+            .image_container {
+            }
+            .image_container_inner {
+                position: relative;
+                margin: 0 auto;
+                width: 40vw;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="mainframe">        
+            <div class="image_container">
+                <div class="image_container_inner" onmouseover="onHover()" onmouseout="offHover()">
+                        <a href="home.html"><img src="gif/heart.gif" id="heart"></a>
+                        <img src="gif/blue-hair-beauty.gif" id="lady">
+                </div>
+            </div>
+        </div>
+        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+        <script src="lib/nav.js"></script>
+        <script>
+            function onHover() {
+                $("#lady").attr('src', 'gif/hover.gif');
+            }
+
+            function offHover() {
+                $("#lady").attr('src', 'gif/blue-hair-beauty.gif');
+            }
+        </script>
+    </body>
+</html>
